@@ -1,0 +1,9 @@
+services:
+  web:
+    container_name: webserver
+    image: nginx
+    ports:
+      - "8082:80"
+    volumes:
+      - ./data:/usr/share/nginx/html
+    restart: on-failure
